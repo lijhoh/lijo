@@ -1,0 +1,11 @@
+jobs:
+  build:
+    parallelism: 4
+    docker:
+      - image: cimg/go:1.17.2
+    steps:
+      - checkout
+      - run: 
+          name: Run tests 
+          no_output_timeout: 5h 
+          command: lscpu
